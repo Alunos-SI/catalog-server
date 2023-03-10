@@ -1,5 +1,5 @@
 # catalog-server 
-Este projeto é uma API rest que servirá como back-end para a aplicação iLearn, desenvolvida em Laravel e utilizando a linguagem PHP e banco de dados Mysql.
+Este projeto é uma API rest que servirá como back-end para a aplicação Catalog, desenvolvida em Laravel e utilizando a linguagem PHP e banco de dados Mysql.
 
 ### Catalog
 
