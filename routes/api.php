@@ -20,10 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::post('/validate-token', [AuthController::class, 'validateToken']);
     
-    // Minhas rotas
-    Route::get('/usuario', [AuthController::class, 'index']);
-    Route::apiResource('categoria', CategoriaController::class);
-    Route::get('/posts/{post}/commentario', [PostController::class, 'showWithCommentario'])->name('posts.showWithCommentario');
-    Route::apiResource('produto', ProdutoController::class);
-    Route::apiResource('commentario', CommentarioController::class);
+
 });
