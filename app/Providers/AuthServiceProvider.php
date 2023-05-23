@@ -1,7 +1,7 @@
 <?php
 
-namespace App\Providers;
-
+namespace App\Providers; 
+use Illuminate\Auth\Notifications\ResetPassword;
 // use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
