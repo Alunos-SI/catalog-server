@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('comentarios', function (Blueprint $table) {
             $table->id(); 
-            $table->foreignIdFor( model: User::class); 
+            $table->foreignIdFor(User::class); 
             $table->foreignIdFor(Post::class);
             $table->text('content');
             $table->timestamps();
