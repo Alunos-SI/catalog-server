@@ -1,4 +1,6 @@
-<?php
+<?php 
+use\Models\User; 
+use\Models\Categoria;
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
