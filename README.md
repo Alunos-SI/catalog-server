@@ -68,10 +68,40 @@ Utilizando os seguintes comandos
 
 - Criar Model e Migration:  
  ```bash
-- php artisan make:model NomeDoModel -m
+php artisan make:model NomeDoModel -m
 ```
-- Criar Controller: php artisan make:controller NomeDoModelController -r --api
-- Criar Resource: php artisan make:resource NomeDoModelResource
-- Criar Request: php artisan make:request NomeDoModelRequest
+- Criar Controller:  
+ ```bash
+php artisan make:controller NomeDoModelController -r --api
+```
+- Criar Resource:  
+ ```bash
+php artisan make:resource NomeDoModelResource
+```
+- Criar Request:  
+```bash
+php artisan make:request NomeDoModelRequest
+``` 
+## Autenticação 
+
+Autenticar usuários é tão simples quanto adicionar um middleware de autenticação à sua definição de rota do Laravel: 
+
+```bash
+Route::get('/profile', ProfileController::class)
+    ->middleware('auth');
+```  
+
+Depois que o usuário é autenticado, você pode acessar o usuário autenticado por meio da Authfachada: 
+
+```bash
+use Illuminate\Support\Facades\Auth;
+ 
+// Get the currently authenticated user...
+$user = Auth::user();
+```  
+Claro, você pode definir seu próprio middleware de autenticação, permitindo personalizar o processo de autenticação.
+
+Para mais informações sobre os recursos de autenticação do Laravel, confira a documentação de autenticação(https://laravel.com/docs).
+
 
 
