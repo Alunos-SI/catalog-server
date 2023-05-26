@@ -28,8 +28,8 @@ Visando uma melhor experiencia para os clientes, e donos de loja, o catalog perm
 
 Há uma variedade de ferramentas e estruturas disponíveis para você ao criar um aplicativo da web. No entanto, acreditamos que o Laravel é a melhor escolha para criar aplicativos da Web modernos e completos, por possuir:  
 
--[Uma Estrutura Progressiva] 
--[Uma Estrutura Escalável] 
--[Um Quadro Comunitário]
+- [Uma Estrutura Progressiva]. 
+- [Uma Estrutura Escalável]. 
+- [Um Quadro Comunitário].
 
 
