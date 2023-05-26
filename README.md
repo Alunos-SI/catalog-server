@@ -37,5 +37,8 @@ Há uma variedade de ferramentas e estruturas disponíveis para você ao criar u
 Antes de criar seu primeiro projeto Laravel, você deve garantir que sua máquina local tenha o PHP e o Composer instalados.
 Depois de instalar o PHP e o Composer, você pode criar um novo projeto Laravel através do create-projectcomando Composer: 
 
+```bash
 composer create-project laravel/laravel example-app
+```
+
 
