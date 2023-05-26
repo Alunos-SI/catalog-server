@@ -22,5 +22,11 @@ Visando uma melhor experiencia para os clientes, e donos de loja, o catalog perm
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+</p> 
+## Por que Laravel 
+Há uma variedade de ferramentas e estruturas disponíveis para você ao criar um aplicativo da web. No entanto, acreditamos que o Laravel é a melhor escolha para criar aplicativos da Web modernos e completos, por possuir: 
+-[Uma Estrutura Progressiva] 
+-[Uma Estrutura Escalável] 
+-[Um Quadro Comunitário]
+
 
