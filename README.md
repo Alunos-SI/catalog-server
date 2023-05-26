@@ -30,7 +30,11 @@ Há uma variedade de ferramentas e estruturas disponíveis para você ao criar u
 
 - Uma Estrutura Progressiva. 
 - Uma Estrutura Escalável. 
-- Um Quadro Comunitário.
+- Um Quadro Comunitário. 
+
+## Licença 
+
+A estrutura Laravel é um software de código aberto licenciado sob a [Licença MIT](https://opensource.org/licenses/MIT).
 
 ## Primeiro projeto Laravel 
 
@@ -101,7 +105,7 @@ $user = Auth::user();
 ```  
 Claro, você pode definir seu próprio middleware de autenticação, permitindo personalizar o processo de autenticação.
 
-Para mais informações sobre os recursos de autenticação do Laravel, confira a documentação de autenticação(https://laravel.com/docs).
+Para mais informações sobre os recursos de autenticação do Laravel, confira a [documentação de autenticação](https://laravel.com/docs).
 
 
 
