@@ -28,9 +28,9 @@ Visando uma melhor experiencia para os clientes, e donos de loja, o catalog perm
 
 Há uma variedade de ferramentas e estruturas disponíveis para você ao criar um aplicativo da web. No entanto, acreditamos que o Laravel é a melhor escolha para criar aplicativos da Web modernos e completos, por possuir:  
 
-- [Uma Estrutura Progressiva]. 
-- [Uma Estrutura Escalável]. 
-- [Um Quadro Comunitário].
+- Uma Estrutura Progressiva. 
+- Uma Estrutura Escalável. 
+- Um Quadro Comunitário.
 
 ## Primeiro projeto Laravel 
 
@@ -53,6 +53,25 @@ O Laravel tem a mais extensa e completa [documentação](https://laravel.com/doc
 
 Se você não quiser ler, [Laracasts](https://laracasts.com) pode ajudar. Laracasts contém mais de 1500 tutoriais em vídeo sobre uma variedade de tópicos, incluindo Laravel, PHP moderno, teste de unidade e JavaScript. Aumente suas habilidades explorando nossa abrangente biblioteca de vídeos. 
 
+## Criação das Classes 
 
+Para cada entidade presente no modelo de banco de dados foi criadado: 
+
+- Model (app/Models)
+- Migration (database/migrations)
+- Controller (app/Http/Controllers)
+- Resource (app/Http/Resources)
+- Request (app/Http/Requests)
+- Rotas (routes/api.php) 
+
+Utilizando os seguintes comandos 
+
+- Criar Model e Migration:  
+ ```bash
+- php artisan make:model NomeDoModel -m
+```
+- Criar Controller: php artisan make:controller NomeDoModelController -r --api
+- Criar Resource: php artisan make:resource NomeDoModelResource
+- Criar Request: php artisan make:request NomeDoModelRequest
 
 
