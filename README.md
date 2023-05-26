@@ -15,6 +15,12 @@ Visando uma melhor experiencia para os clientes, e donos de loja, o catalog perm
 - [ ] 7. Criação da documentação - 26/05
 - [ ] 8. Entreda da API + APP - 19/06
 
-<div align="center"> 
-<img src=" ![LARAVEL](https://github.com/Alunos-SI/catalog-server/assets/94492797/d55c9df3-55ba-4f54-884d-c751ce027a1e)" width="700px" />
-</div>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
+
