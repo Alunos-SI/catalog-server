@@ -14,3 +14,7 @@ Visando uma melhor experiencia para os clientes, e donos de loja, o catalog perm
 - [x] 6. Conclusão da API - 05/05
 - [ ] 7. Criação da documentação - 26/05
 - [ ] 8. Entreda da API + APP - 19/06
+
+<div align="center"> 
+<img src=" ![LARAVEL](https://github.com/Alunos-SI/catalog-server/assets/94492797/d55c9df3-55ba-4f54-884d-c751ce027a1e)" width="700px" />
+</div>
