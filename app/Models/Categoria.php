@@ -16,9 +16,9 @@ class Categoria extends Model
     /**
      * Get the posts for the category.
      */
-    public function posts()
+    public function produtos()
     {
-        return $this->hasMany(Post::class);
+        return $this->hasMany(Produto::class);
     }
 
     public function getAll($filter = null)

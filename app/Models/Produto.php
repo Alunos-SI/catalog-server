@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class Produto extends Model
 {
     use HasFactory;
 
@@ -28,14 +28,14 @@ class Post extends Model
     /**
      * Get the category that owns the post.
      */
-    public function category()
+    public function categoria()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(Categoria::class);
     }
 
-    public function comments()
+    public function comentario()
     {
-        return $this->hasMany(Comment::class);
+        return $this->hasMany(Comentario::class);
     }
 
     public function getAll($filter = null)

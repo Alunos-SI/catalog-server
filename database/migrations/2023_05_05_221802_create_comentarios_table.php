@@ -1,6 +1,6 @@
 <?php 
 use App\Models\User; 
-use App\Models\Post;
+use App\Models\Produto;
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('comentarios', function (Blueprint $table) {
             $table->id(); 
             $table->foreignIdFor(User::class); 
-            $table->foreignIdFor(Post::class);
+            $table->foreignIdFor(Produto::class);
             $table->text('content');
             $table->timestamps();
         });
