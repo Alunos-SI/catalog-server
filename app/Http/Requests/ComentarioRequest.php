@@ -23,7 +23,7 @@ class ComentarioRequest extends FormRequest
     {
         return [
             'user_id' => 'required',
-            'post_id' => 'required',
+            'produto_id' => 'required',
             'content' => 'required|string|min:3|max:255'
         ];
     }

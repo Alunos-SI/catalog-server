@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use Illuminate\Http\Request; 
+use App\Http\Requests\ProdutoRequest; 
+use App\Http\Resources\ProdutoResource; 
+use App\Models\Produto;
 
 class ProdutoController extends Controller
 {
@@ -24,7 +27,7 @@ class ProdutoController extends Controller
      */
     public function index(Request $request)
     {
-        return PostResource::collection(
+        return ProdutoResource::collection(
             $this->produto->getAll($request->filter)
         );
     }
@@ -59,7 +62,7 @@ class ProdutoController extends Controller
      */
     public function showWithComments(String $id)
     {
-        $produto = $this->produto->with('comments')->find($id);
+        $produto = $this->produto->with('comentario')->find($id);
         if ($produto) {
             return new ProdutoResource($produto);
         }

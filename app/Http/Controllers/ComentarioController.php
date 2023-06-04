@@ -7,16 +7,16 @@ use Illuminate\Http\Request;
 
 class ComentarioController extends Controller
 {
-    private $comment;
+    private $comentario;
 
     /**
      * Class constructor
      *
-     * @param Comment $comment dependence injection
+     * @param Comentario $comentario dependence injection
      */
-    public function __construct(Comment $comment)
+    public function __construct(comentario $comentario)
     {
-        $this->comment = $comment;
+        $this->comentario = $comentario;
     }
 
     /**
@@ -24,19 +24,19 @@ class ComentarioController extends Controller
      */
     public function index(Request $request)
     {
-        return CommentResource::collection(
-            $this->comment->getAll($request->filter)
+        return comentarioResource::collection(
+            $this->comentario->getAll($request->filter)
         );
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(CommentRequest $request)
+    public function store(comentarioRequest $request)
     {
-        $comment = $this->comment->create($request->all());
+        $comentario = $this->comentario->create($request->all());
 
-        $resource = new CommentResource($comment);
+        $resource = new comentarioResource($comentario);
         return $resource->response()->setStatusCode(201);
     }
 
@@ -45,9 +45,9 @@ class ComentarioController extends Controller
      */
     public function show(string $id)
     {
-        $comment = $this->comment->find($id);
-        if ($comment) {
-            return new CommentResource($comment);
+        $comentario = $this->comentario->find($id);
+        if ($comentario) {
+            return new comentarioResource($comentario);
         }
         return response()->json(['error' => '404 Not Found'], 404);
     }
@@ -55,12 +55,12 @@ class ComentarioController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(CommentRequest $request, string $id)
+    public function update(comentarioRequest $request, string $id)
     {
-        $comment = $this->comment->find($id);
-        if ($comment) {
-            $comment->update($request->all());
-            return new CommentResource($comment);
+        $comentario = $this->comentario->find($id);
+        if ($comentario) {
+            $comentario->update($request->all());
+            return new comentarioResource($comentario);
         }
         return response()->json(['error' => '404 Not Found'], 404);
     }
@@ -70,9 +70,9 @@ class ComentarioController extends Controller
      */
     public function destroy(string $id)
     {
-        $comment = $this->comment->find($id);
-        if ($comment) {
-            $comment->delete();
+        $comentario = $this->comentario->find($id);
+        if ($comentario) {
+            $comentario->delete();
             return response()->json([], 204);
         }
         return response()->json(['error' => '404 Not Found'], 404);
