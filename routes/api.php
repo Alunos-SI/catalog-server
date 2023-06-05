@@ -22,14 +22,16 @@ Route::post('/login', [AuthController::class, 'login']);
 
 
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+
+Route::middleware(['auth:sanctum'])->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::post('/validate-token', [AuthController::class, 'validateToken']);
     
+    // Minhas rotas
     Route::get('/users', [AuthController::class, 'index']);
-    Route::apiResource('categorias', CategoriaController::class);
+    Route::apiResource('categorias', CategoriaController::class); 
     Route::get('/produto/{produto}/comentario', [ProdutoController::class, 'showWithComentario'])->name('produto.showWithComentario');
     Route::apiResource('produto', ProdutoController::class);
     Route::apiResource('comentario', ComentarioController::class);
-
+  
 });

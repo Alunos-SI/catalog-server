@@ -76,7 +76,7 @@ class CategoriaController extends Controller
      */
     public function update(CategoriaRequest $request, string $id)
     {
-        $category = $this->categoria->find($id);
+        $categoria = $this->categoria->find($id);
         if ($categoria) {
             $categoria->update($request->all());
             return new CategoriaResource($categoria);
