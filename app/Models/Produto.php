@@ -12,9 +12,9 @@ class Produto extends Model
     protected $fillable = [
         'user_id',
         'category_id',
-        'title',
-        'content',
-        'photo_path',
+        'nome',
+        'descricao',
+        'valor',
     ];
 
     /**

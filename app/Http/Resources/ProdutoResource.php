@@ -18,24 +18,21 @@ class ProdutoResource extends JsonResource
             return [
                 'id' => $this->id,
                 'user_id' => $this->user_id,
-                'usuario_name' => $this->user->name,
                 'categoria_id' => $this->categoria_id,
-                'title' => $this->title,
-                'content' => $this->content,
-                'photo_path' => $this->photo_path,
+                'nome' => $this->nome,
+                'descricao' => $this->descricao,
+                'valor' => $this->valor,
                 'created_at' => $this->created_at,
-                'commentario' => ComentarioResource::collection($this->commentario),
             ];
         }
 
         return [
             'id' => $this->id,
             'user_id' => $this->user_id,
-            'user_name' => $this->user->name,
             'categoria_id' => $this->categoria_id,
-            'title' => $this->title,
-            'content' => $this->content,
-            'photo_path' => $this->photo_path,
+            'nome' => $this->nome,
+            'descricao' => $this->descricao,
+            'valor' => $this->valor,
             'created_at' => $this->created_at,
         ];
     }
