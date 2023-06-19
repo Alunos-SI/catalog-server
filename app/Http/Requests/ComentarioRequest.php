@@ -11,7 +11,7 @@ class ComentarioRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,9 +22,9 @@ class ComentarioRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'user_id' => 'required',
-            'produto_id' => 'required',
-            'content' => 'required|string|min:3|max:255'
+            'user_id' => 'required|exists:users,id',
+            'produto_id' => 'required|exists:produtos,id',
+            'content' => 'required|string|min:3'
         ];
     }
 }

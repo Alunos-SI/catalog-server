@@ -11,7 +11,7 @@ class ProdutoRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,11 +22,14 @@ class ProdutoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'user_id' => 'required',
-            'category_id' => 'required',
+            'user_id' => 'required|exists:users,id',
+            'category_id' => 'required|exists:categorias,id',
             'title' => 'required|string|min:3|max:255',
             'content' => 'required|string|min:3',
             'photo_path' => 'nullable',
+            'valor' => 'required|numeric',
+            'descricao' => 'required|string',
+            'nome' => 'required|string'
         ];
     }
 }

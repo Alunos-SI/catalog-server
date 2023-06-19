@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ComentarioRequest;
+use App\Http\Resources\ComentarioResource;
+use App\Models\Comentario;
 use Illuminate\Http\Request;
 
 class ComentarioController extends Controller
@@ -14,7 +17,7 @@ class ComentarioController extends Controller
      *
      * @param Comentario $comentario dependence injection
      */
-    public function __construct(comentario $comentario)
+    public function __construct(Comentario $comentario)
     {
         $this->comentario = $comentario;
     }
@@ -24,7 +27,7 @@ class ComentarioController extends Controller
      */
     public function index(Request $request)
     {
-        return comentarioResource::collection(
+        return ComentarioResource::collection(
             $this->comentario->getAll($request->filter)
         );
     }
@@ -32,7 +35,7 @@ class ComentarioController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(comentarioRequest $request)
+    public function store(ComentarioRequest $request)
     {
         $comentario = $this->comentario->create($request->all());
 
