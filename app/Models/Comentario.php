@@ -11,7 +11,7 @@ class Comentario extends Model
 
     protected $fillable = [
         'user_id',
-        'post_id',
+        'produto_id',
         'content',
     ];
 

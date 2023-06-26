@@ -1,6 +1,7 @@
-<?php 
-use App\Models\User; 
+<?php
+
 use App\Models\Categoria;
+use App\Models\User;
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -14,11 +15,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('produtos', function (Blueprint $table) {
-            $table->id(); 
-            $table->foreignIdfor(User::class); 
-            $table->foreignIdfor(Categoria::class); 
-            $table->float('valor'); 
-            $table->text('descricao'); 
+            $table->id();
+            $table->foreignIdfor(User::class);
+            $table->foreignIdfor(Categoria::class);
+            $table->float('valor');
+            $table->text('descricao');
             $table->string('nome');
             $table->timestamps();
         });

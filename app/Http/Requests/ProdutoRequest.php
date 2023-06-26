@@ -22,11 +22,12 @@ class ProdutoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'user_id' => 'required|exists:users,id',
-            'category_id' => 'required|exists:categorias,id',
+            'user_id' => 'required|numeric|exists:users,id',
+            'categoria_id' => 'required|numeric|exists:categorias,id',
             'title' => 'required|string|min:3|max:255',
             'content' => 'required|string|min:3',
             'photo_path' => 'nullable',
+            'imagem' => 'sometimes|file|max:5000|mimes:jpeg,png,jpg',
             'valor' => 'required|numeric',
             'descricao' => 'required|string',
             'nome' => 'required|string'

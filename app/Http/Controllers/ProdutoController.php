@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request; 
-use App\Http\Requests\ProdutoRequest; 
-use App\Http\Resources\ProdutoResource; 
+use Illuminate\Http\Request;
+use App\Http\Requests\ProdutoRequest;
+use App\Http\Resources\ProdutoResource;
 use App\Models\Produto;
 
 class ProdutoController extends Controller
@@ -27,9 +27,8 @@ class ProdutoController extends Controller
      */
     public function index(Request $request)
     {
-        return ProdutoResource::collection(
-            $this->produto->getAll($request->filter)
-        );
+        $produtos = Produto::all();
+        return response()->json(["data" => $produtos], 200);
     }
 
     /**
@@ -37,7 +36,20 @@ class ProdutoController extends Controller
      */
     public function store(ProdutoRequest $request)
     {
-        $produto = $this->produto->create($request->all());
+
+        $path = null;
+        if ($request->file('imagem')) {
+            $file = $request->file('imagem');
+            $path = $file->store('imagens', 'public');
+        }
+        $produto = $this->produto->create([
+            'nome' => $request->nome,
+            'descricao' => $request->descricao,
+            'user_id' => $request->user_id,
+            'categoria_id' => $request->categoria_id,
+            'imagem' => $path,
+            'valor' => $request->valor,
+        ]);
 
         $resource = new ProdutoResource($produto);
 

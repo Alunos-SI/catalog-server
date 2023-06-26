@@ -11,9 +11,10 @@ class Produto extends Model
 
     protected $fillable = [
         'user_id',
-        'category_id',
+        'categoria_id',
         'nome',
         'descricao',
+        'imagem',
         'valor',
     ];
 
@@ -45,7 +46,7 @@ class Produto extends Model
         }
 
         return $this->where('title', 'LIKE', "%$filter%")
-        ->orWhere('content', 'LIKE', "%$filter%")
-        ->paginate();
+            ->orWhere('content', 'LIKE', "%$filter%")
+            ->paginate();
     }
 }

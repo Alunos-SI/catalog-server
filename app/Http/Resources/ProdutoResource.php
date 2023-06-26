@@ -14,24 +14,13 @@ class ProdutoResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        if(in_array('comentario', $request->segments())) {
-            return [
-                'id' => $this->id,
-                'user_id' => $this->user_id,
-                'categoria_id' => $this->categoria_id,
-                'nome' => $this->nome,
-                'descricao' => $this->descricao,
-                'valor' => $this->valor,
-                'created_at' => $this->created_at,
-            ];
-        }
-
         return [
             'id' => $this->id,
             'user_id' => $this->user_id,
             'categoria_id' => $this->categoria_id,
             'nome' => $this->nome,
             'descricao' => $this->descricao,
+            'imagem' => $this->imagem,
             'valor' => $this->valor,
             'created_at' => $this->created_at,
         ];
